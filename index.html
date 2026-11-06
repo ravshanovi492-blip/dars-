@@ -1,274 +1,236 @@
+
 <!DOCTYPE html>
 <html lang="uz">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ibrat Kelajagi - Bepul Ta'lim Platformasi</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- FontAwesome belgilar uchun -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#102b45">
+  <title>IBROHIM — Bilim sari yangi qadam</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href=".env">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- NAVIGATSIYA -->
-    <nav class="navbar">
-        <div class="container nav-container">
-            <a href="#" class="logo">
-                <i class="fa-solid fa-graduation-cap logo-icon"></i>
-                <span class="logo-text">IBRAT <span>KELAJAGI</span></span>
-            </a>
+<header class="header">
+  <a href="#home" class="brand">
+    <span class="brand-icon">I</span>
+    <span>IBROHIM<small>TA'LIM MARKAZI</small></span>
+  </a>
 
-            <div class="nav-links" id="navLinks">
-                <a href="#home" class="active">Bosh sahifa</a>
-                <a href="#courses">Kurslar</a>
-                <a href="#about">Biz haqimizda</a>
-                <a href="#app">Mobil Ilova</a>
-                <a href="#contact">Aloqa</a>
-            </div>
+  <button class="menu-btn" id="menu">☰</button>
 
-            <div class="nav-actions">
-                <button class="btn btn-outline" id="quizBtn">
-                    <i class="fa-solid fa-compass"></i> Kurs Tanlash
-                </button>
-                <button class="btn btn-primary">Kirish</button>
-                <button class="menu-toggle" id="menuToggle">
-                    <i class="fa-solid fa-bars"></i>
-                </button>
-            </div>
-        </div>
-    </nav>
+  <nav id="nav">
+    <a href="#home">Bosh sahifa</a>
+    <a href="#about">Markaz haqida</a>
+    <a href="#courses">Kurslar</a>
+    <a href="#online">Onlayn darslar</a>
+    <a href="#contact">Aloqa</a>
+  </nav>
 
-    <!-- HERO SECTION (Asosiy qism) -->
-    <section class="hero" id="home">
-        <div class="container hero-container">
-            <div class="hero-content">
-                <div class="badge">
-                    <i class="fa-solid fa-sparkles"></i> 100% Bepul Ta'lim
-                </div>
-                <h1>Xorijiy tillarni va kasblarni <span>bepul</span> o'rganing!</h1>
-                <p>Bizning maqsadimiz — har bir yoshga sifatli va zamonaviy bilimlarni mutlaqo bepul taqdim etish. O'z kelajagingizni bugundan quring!</p>
-                
-                <div class="hero-btns">
-                    <a href="#courses" class="btn btn-primary btn-lg">
-                        <i class="fa-solid fa-play"></i> Darslarni boshlash
-                    </a>
-                    <a href="#app" class="btn btn-secondary btn-lg">
-                        <i class="fa-solid fa-download"></i> Ilovani yuklash
-                    </a>
-                </div>
+  <a href="#contact" class="header-btn">Kursga yozilish ↗</a>
+</header>
 
-                <div class="hero-stats">
-                    <div class="stat-item">
-                        <h3 class="counter" data-target="1500000">0</h3>
-                        <p>O'quvchilar</p>
-                    </div>
-                    <div class="stat-item">
-                        <h3 class="counter" data-target="25">0</h3>
-                        <p>Tillar va Kurslar</p>
-                    </div>
-                    <div class="stat-item">
-                        <h3 class="counter" data-target="2000">0</h3>
-                        <p>Video Darslar</p>
-                    </div>
-                </div>
-            </div>
+<main>
+  <section class="hero" id="home">
+    <div class="hero-shade"></div>
 
-            <div class="hero-image">
-                <div class="img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80" alt="Ibrat Kelajagi Yoshlari">
-                    <div class="floating-card c1">
-                        <i class="fa-solid fa-language icon-blue"></i>
-                        <div>
-                            <h4>Ingliz tili</h4>
-                            <p>A1 dan C1 gacha</p>
-                        </div>
-                    </div>
-                    <div class="floating-card c2">
-                        <i class="fa-solid fa-certificate icon-green"></i>
-                        <div>
-                            <h4>Sertifikat</h4>
-                            <p>Bepul beriladi</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <div class="hero-content">
+      <div class="eyebrow">
+        <span></span> BILIM BILAN KELAJAK SARI
+      </div>
 
-    <!-- KURSLAR SECTION -->
-    <section class="courses" id="courses">
-        <div class="container">
-            <div class="section-title">
-                <h2>Ommabop Kurslarimiz</h2>
-                <p>O'zingizga ma'qul yo'nalishni tanlang va o'rganishni boshlang</p>
-            </div>
+      <h1>Bugungi bilim —<br>
+        <em>ertangi imkoniyat.</em>
+      </h1>
 
-            <div class="filter-tabs">
-                <button class="filter-btn active" data-filter="all">Barchasi</button>
-                <button class="filter-btn" data-filter="lang">Chet tillari</button>
-                <button class="filter-btn" data-filter="tech">IT va Texnologiya</button>
-                <button class="filter-btn" data-filter="profession">Zamonaviy Kasblar</button>
-            </div>
+      <p>
+        O‘rganing, rivojlaning va o‘z kelajagingizni
+        o‘z qo‘lingiz bilan yarating. Yangi bilimlar
+        sari birinchi qadamingizni biz bilan boshlang.
+      </p>
 
-            <div class="course-grid" id="courseGrid">
-                <!-- Kurs 1 -->
-                <div class="course-card" data-category="lang">
-                    <div class="card-thumb">
-                        <span class="category-tag">Til</span>
-                        <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=500&q=80" alt="Ingliz tili">
-                    </div>
-                    <div class="card-body">
-                        <h3>Interaktiv Ingliz Tili (Intensive)</h3>
-                        <p>Grammatika, So'zlashuv va IELTS ga tayyorgarlik kursi.</p>
-                        <div class="card-meta">
-                            <span><i class="fa-regular fa-clock"></i> 45 soat</span>
-                            <span><i class="fa-solid fa-star"></i> 4.9 (12.4k)</span>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <span class="price-free">BEPUL</span>
-                        <button class="btn btn-sm btn-primary">Boshlash</button>
-                    </div>
-                </div>
+      <div class="hero-actions">
+        <a href="#courses" class="gold-btn">Kurslarni kashf etish ↗</a>
+        <a href="#about" class="text-btn">Biz haqimizda →</a>
+      </div>
 
-                <!-- Kurs 2 -->
-                <div class="course-card" data-category="lang">
-                    <div class="card-thumb">
-                        <span class="category-tag">Til</span>
-                        <img src="https://images.unsplash.com/photo-1527866512907-a35a62a0f6c5?auto=format&fit=crop&w=500&q=80" alt="Nemis tili">
-                    </div>
-                    <div class="card-body">
-                        <h3>Nemis Tili noldan A2 gacha</h3>
-                        <p>Germaniyada o'qish va ishlashni xohlovchilar uchun maxsus kurs.</p>
-                        <div class="card-meta">
-                            <span><i class="fa-regular fa-clock"></i> 32 soat</span>
-                            <span><i class="fa-solid fa-star"></i> 4.8 (8.1k)</span>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <span class="price-free">BEPUL</span>
-                        <button class="btn btn-sm btn-primary">Boshlash</button>
-                    </div>
-                </div>
-
-                <!-- Kurs 3 -->
-                <div class="course-card" data-category="tech">
-                    <div class="card-thumb">
-                        <span class="category-tag">IT</span>
-                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=500&q=80" alt="Frontend Development">
-                    </div>
-                    <div class="card-body">
-                        <h3>Web Dasturlash (Frontend)</h3>
-                        <p>HTML, CSS, JavaScript va React orqali zamonaviy saytlar yaratish.</p>
-                        <div class="card-meta">
-                            <span><i class="fa-regular fa-clock"></i> 60 soat</span>
-                            <span><i class="fa-solid fa-star"></i> 5.0 (15.2k)</span>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <span class="price-free">BEPUL</span>
-                        <button class="btn btn-sm btn-primary">Boshlash</button>
-                    </div>
-                </div>
-
-                <!-- Kurs 4 -->
-                <div class="course-card" data-category="profession">
-                    <div class="card-thumb">
-                        <span class="category-tag">Kasb</span>
-                        <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=500&q=80" alt="SMM Grafika">
-                    </div>
-                    <div class="card-body">
-                        <h3>SMM va Grafika Dizayn</h3>
-                        <p>Ijtimoiy tarmoqlarni yuritish va Photoshop/Figma asoslari.</p>
-                        <div class="card-meta">
-                            <span><i class="fa-regular fa-clock"></i> 28 soat</span>
-                            <span><i class="fa-solid fa-star"></i> 4.7 (6.5k)</span>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <span class="price-free">BEPUL</span>
-                        <button class="btn btn-sm btn-primary">Boshlash</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- MOBIL ILOVA SECTION -->
-    <section class="app-section" id="app">
-        <div class="container app-container">
-            <div class="app-content">
-                <h2>Mobil Ilovamizni Yuklab Oling</h2>
-                <p>Istalgan joyda va istalgan vaqtda bilimlarni o'zlashtiring. Oflayn rejimda ko'rish imkoniyati ham mavjud.</p>
-                <div class="app-store-btns">
-                    <a href="#" class="store-btn">
-                        <i class="fa-brands fa-apple"></i>
-                        <div>
-                            <span>Download on the</span>
-                            <h4>App Store</h4>
-                        </div>
-                    </a>
-                    <a href="#" class="store-btn">
-                        <i class="fa-brands fa-google-play"></i>
-                        <div>
-                            <span>GET IT ON</span>
-                            <h4>Google Play</h4>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="app-preview">
-                <i class="fa-solid fa-mobile-screen-button phone-icon"></i>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer>
-        <div class="container footer-container">
-            <div class="footer-col">
-                <a href="#" class="logo footer-logo">
-                    <i class="fa-solid fa-graduation-cap"></i> IBRAT KELAJAGI
-                </a>
-                <p>Yoshlarimiz kelajagi va rivojlanishi uchun xizmat qiladigan bepul ta'lim loyihasi.</p>
-            </div>
-            <div class="footer-col">
-                <h4>Tezkor Havolalar</h4>
-                <ul>
-                    <li><a href="#home">Bosh sahifa</a></li>
-                    <li><a href="#courses">Kurslar</a></li>
-                    <li><a href="#about">Biz haqimizda</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Biz bilan bog'laning</h4>
-                <div class="social-links">
-                    <a href="#"><i class="fa-brands fa-telegram"></i></a>
-                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Ibrat Kelajagi. Barcha huquqlar himoyalangan.</p>
-        </div>
-    </footer>
-
-    <!-- INTERAKTIV TEST MODALI -->
-    <div class="modal" id="quizModal">
-        <div class="modal-content">
-            <span class="close-modal" id="closeModal">&times;</span>
-            <h2>O'zingizga mos kursni toping</h2>
-            <p>Qaysi yo'nalish sizga ko'proq qiziq?</p>
-            <div class="quiz-options">
-                <button class="btn btn-outline quiz-opt" data-result="Ingliz tili yoki Nemis tili">Chet tillarini o'rganish</button>
-                <button class="btn btn-outline quiz-opt" data-result="Frontend Web Dasturlash">Kompyuter va Dasturlash</button>
-                <button class="btn btn-outline quiz-opt" data-result="SMM va Dizayn">Dizayn va Marketing</button>
-            </div>
-            <div class="quiz-result" id="quizResult"></div>
-        </div>
+      <div class="hero-note">
+        <span>✦</span> Har bir katta natija kichik qadamdan boshlanadi.
+      </div>
     </div>
 
-    <script src="script.js"></script>
+    <div class="hero-bottom">
+      <span>IBROHIM EDUCATION CENTER</span>
+      <span>01 — BILIM / 2026</span>
+    </div>
+  </section>
+
+  <section class="intro" id="about">
+    <div class="intro-label">01 / BIZ HAQIMIZDA</div>
+
+    <div class="intro-content">
+      <h2>Bilim olish — bu<br><em>o‘zingizga berilgan</em><br>eng yaxshi imkoniyat.</h2>
+      <p>
+        IBROHIM O‘QUV MARKAZI — zamonaviy ta'lim,
+        mustahkam bilim va yangi imkoniyatlar maskani.
+        Bizning maqsadimiz o‘quvchilarning qobiliyatini
+        rivojlantirish va ularni katta maqsadlar sari
+        yo‘naltirish.
+      </p>
+    </div>
+
+    <div class="intro-line"></div>
+    <div class="intro-bottom">
+      <span>O‘RGANING</span>
+      <span>IZLANING</span>
+      <span>RIVOJLANING</span>
+    </div>
+  </section>
+
+  <section class="courses-section" id="courses">
+    <div class="section-heading">
+      <div>
+        <div class="intro-label">02 / TA'LIM YO‘NALISHLARI</div>
+        <h2>O‘z yo‘nalishingni <em>tanla.</em></h2>
+      </div>
+      <p>Har bir kurs yangi imkoniyatlar eshigini ochadi.</p>
+    </div>
+
+    <div class="course-grid">
+
+      <article class="course-card">
+        <div class="course-image english">
+          <span>01</span>
+          <b>EN</b>
+        </div>
+        <div class="course-info">
+          <span>TIL O‘RGANISH</span>
+          <h3>Ingliz tili</h3>
+          <p>Speaking, listening, grammar va yangi so‘zlar.</p>
+          <a href="#contact">Kursga yozilish ↗</a>
+        </div>
+      </article>
+
+      <article class="course-card">
+        <div class="course-image coding">
+          <span>02</span>
+          <b>&lt;/&gt;</b>
+        </div>
+        <div class="course-info">
+          <span>RAQAMLI TEXNOLOGIYA</span>
+          <h3>Dasturlash</h3>
+          <p>HTML, CSS, JavaScript va web loyihalar.</p>
+          <a href="#contact">Kursga yozilish ↗</a>
+        </div>
+      </article>
+
+      <article class="course-card">
+        <div class="course-image math">
+          <span>03</span>
+          <b>∑</b>
+        </div>
+        <div class="course-info">
+          <span>ANIQ FANLAR</span>
+          <h3>Matematika</h3>
+          <p>Mantiqiy fikrlash va masalalar yechish.</p>
+          <a href="#contact">Kursga yozilish ↗</a>
+        </div>
+      </article>
+
+      <article class="course-card">
+        <div class="course-image russian">
+          <span>04</span>
+          <b>RU</b>
+        </div>
+        <div class="course-info">
+          <span>TIL O‘RGANISH</span>
+          <h3>Rus tili</h3>
+          <p>Yozish, o‘qish va erkin muloqot.</p>
+          <a href="#contact">Kursga yozilish ↗</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="quote-section">
+    <span class="quote-symbol">“</span>
+    <h2>Ilm — insonni yuksaltiradigan<br><em>eng katta boylik.</em></h2>
+    <p>IBROHIM O‘QUV MARKAZI</p>
+  </section>
+
+  <section class="online-section" id="online">
+    <div class="online-image"></div>
+    <div class="online-content">
+      <div class="intro-label">03 / MASOFAVIY TA'LIM</div>
+      <h2>Bilim olish uchun<br><em>masofa to‘siq emas.</em></h2>
+      <p>
+        Onlayn darslar orqali uyingizdan chiqmasdan
+        yangi bilimlarni o‘rganing. Dars materiallari
+        va topshiriqlardan foydalaning.
+      </p>
+      <a href="https://t.me/" target="_blank" class="gold-btn">
+        Onlayn darslarga o‘tish ↗
+      </a>
+    </div>
+  </section>
+
+  <section class="steps-section">
+    <div class="intro-label">04 / QANDAY BOSHLAYMIZ?</div>
+    <h2>Uch qadamda <em>yangi boshlanish.</em></h2>
+
+    <div class="steps">
+      <div><span>01</span><h3>Kursni tanlang</h3><p>O‘zingizga mos yo‘nalishni belgilang.</p></div>
+      <div><span>02</span><h3>Ro‘yxatdan o‘ting</h3><p>Ma'lumotlaringizni bizga yuboring.</p></div>
+      <div><span>03</span><h3>Ta'limni boshlang</h3><p>Bilim olish sari ilk qadamingizni qo‘ying.</p></div>
+    </div>
+  </section>
+
+  <section class="contact-section" id="contact">
+    <div class="contact-heading">
+      <div class="intro-label">05 / BIZ BILAN BOG‘LANING</div>
+      <h2>Kelajagingizni<br><em>bugun boshlang.</em></h2>
+      <p>Ma'lumotlaringizni qoldiring. Siz bilan bog‘lanamiz.</p>
+
+      <div class="contact-links">
+        <a href="https://t.me/" target="_blank">✈ Telegram orqali aloqa</a>
+        <a href="https://maps.google.com/?q=Tashkent" target="_blank">⌖ Manzilni xaritada ko‘rish</a>
+      </div>
+    </div>
+
+    <form id="registerForm">
+      <label>ISMINGIZ</label>
+      <input id="name" type="text" placeholder="Ismingizni kiriting" required>
+
+      <label>TELEFON RAQAMINGIZ</label>
+      <input id="phone" type="tel" placeholder="+998 90 123 45 67" required>
+
+      <label>TANLANGAN KURS</label>
+      <select id="course" required>
+        <option value="">Kursni tanlang</option>
+        <option>Ingliz tili</option>
+        <option>Dasturlash</option>
+        <option>Matematika</option>
+        <option>Rus tili</option>
+      </select>
+
+      <button type="submit" class="gold-btn">Ma'lumot yuborish ↗</button>
+      <p id="message" aria-live="polite"></p>
+    </form>
+  </section>
+</main>
+
+<footer>
+  <a href="#home" class="brand footer-brand">
+    <span class="brand-icon">I</span>
+    <span>IBROHIM<small>TA'LIM MARKAZI</small></span>
+  </a>
+  <p>Bilim bilan kelajak sari.</p>
+  <span>© 2026 IBROHIM EDUCATION CENTER</span>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
